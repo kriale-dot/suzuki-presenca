@@ -1,0 +1,277 @@
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.usuarios-filtros {
+    margin-bottom: 22px;
+}
+
+
+.usuarios-busca {
+    max-width: 460px;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.usuarios-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.usuario-card {
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.usuario-avatar {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eef2f7;
+
+    color: #1f2937;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES
+===================================================== */
+
+.usuario-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.usuario-nome-linha {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.usuario-info > span {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.usuario-info > small {
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+.usuario-professor-vinculado {
+    color: #64748b !important;
+}
+
+
+.usuario-professor-vinculado strong {
+    color: #374151;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   STATUS / PERFIL
+===================================================== */
+
+.usuario-status,
+.usuario-atual,
+.usuario-perfil {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 22px;
+
+    padding: 2px 8px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.usuario-status.ativo {
+    background: #ecfdf5;
+
+    color: #047857;
+}
+
+
+.usuario-status.inativo {
+    background: #f3f4f6;
+
+    color: #6b7280;
+}
+
+
+.usuario-atual {
+    background: #eff6ff;
+
+    color: #1d4ed8;
+}
+
+
+/* =====================================================
+   PERFIS
+===================================================== */
+
+.usuario-perfil.administrador {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+
+.usuario-perfil.secretaria {
+    background: #f3e8ff;
+
+    color: #7e22ce;
+}
+
+
+.usuario-perfil.professor {
+    background: #e0f2fe;
+
+    color: #0369a1;
+}
+
+
+/* =====================================================
+   AÇÕES
+===================================================== */
+
+.usuario-acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   LISTA VAZIA
+===================================================== */
+
+.usuarios-vazio {
+    padding: 32px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 12px;
+}
+
+
+.usuarios-vazio strong {
+    display: block;
+
+    margin-bottom: 6px;
+}
+
+
+.usuarios-vazio p {
+    margin: 0;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   ERRO
+===================================================== */
+
+.usuarios-erro {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (
+    max-width: 760px
+) {
+
+    .usuario-card {
+        grid-template-columns:
+            auto
+            minmax(0, 1fr);
+    }
+
+
+    .usuario-acoes {
+        grid-column:
+            1 / -1;
+
+        justify-content: flex-end;
+    }
+}

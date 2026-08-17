@@ -1,0 +1,154 @@
+/* =====================================================
+   PÁGINA DE LOGIN
+===================================================== */
+
+.login-pagina {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px;
+
+    background: #f4f7fb;
+}
+
+
+/* =====================================================
+   CARTÃO
+===================================================== */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 36px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe3ed;
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 40px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* =====================================================
+   MARCA
+===================================================== */
+
+.login-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 32px;
+}
+
+
+.login-logo {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #1e293b;
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.login-marca > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login-marca strong {
+    color: #0f172a;
+
+    font-size: 17px;
+}
+
+
+.login-marca span {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.login-cabecalho {
+    margin-bottom: 28px;
+}
+
+
+.login-cabecalho h1 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 30px;
+}
+
+
+.login-cabecalho p {
+    margin: 0;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.login-botao {
+    width: 100%;
+
+    min-height: 46px;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (
+    max-width: 520px
+) {
+
+    .login-pagina {
+        padding: 18px;
+    }
+
+
+    .login-card {
+        padding: 26px 22px;
+    }
+}

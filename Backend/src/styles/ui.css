@@ -1,0 +1,97 @@
+.botao-primario,
+.botao-secundario,
+.botao-perigo-secundario,
+.botao-perigo {
+    border-radius: 9px;
+    padding: 11px 17px;
+    font-weight: 600;
+}
+
+.botao-primario { border: 0; background: #1f2937; color: #fff; }
+.botao-primario:hover:not(:disabled) { background: #111827; }
+.botao-secundario { border: 1px solid #d1d5db; background: #fff; color: #374151; }
+.botao-secundario:hover:not(:disabled) { background: #f5f6f7; }
+.botao-perigo-secundario { border: 1px solid #e1b7b7; background: #fff; color: #a43b3b; }
+.botao-perigo-secundario:hover:not(:disabled) { background: #fff4f4; }
+.botao-perigo { border: 0; background: #a43b3b; color: #fff; }
+.botao-perigo:hover:not(:disabled) { background: #873030; }
+
+button:disabled { opacity: .55; cursor: not-allowed; }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge.ativo { background: #eaf7ef; color: #287a47; }
+.badge.inativo { background: #f2f2f2; color: #767676; }
+
+.estado-pagina,
+.estado-modal,
+.ficha-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+.estado-pagina { min-height: 180px; }
+.estado-modal { min-height: 130px; font-size: 14px; }
+.ficha-vazio { min-height: 180px; padding: 30px; }
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e3e6ea;
+    border-top-color: #1f2937;
+    border-radius: 50%;
+    animation: girar .75s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+.mensagem-erro,
+.formulario-erro,
+.estado-erro-card {
+    border: 1px solid #f3c7c7;
+    border-radius: 10px;
+    background: #fff1f1;
+    color: #8b3030;
+}
+.mensagem-erro { display: flex; flex-direction: column; gap: 6px; padding: 18px; }
+.formulario-erro { padding: 12px 14px; font-size: 14px; }
+.estado-erro-card { margin: 20px 24px; padding: 18px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.estado-erro-card .botao-secundario { margin-top: 6px; }
+
+.toast-sucesso {
+    position: fixed;
+    z-index: 1100;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border: 1px solid #b9e4c9;
+    border-radius: 10px;
+    background: #fff;
+    color: #216e3a;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .14);
+    font-size: 14px;
+    font-weight: 600;
+}
+.toast-icone { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: #e6f6eb; }
+
+.aviso-neutro {
+    padding: 12px 14px;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    background: #f7f8fa;
+    color: #596273;
+    font-size: 13px;
+    line-height: 1.45;
+}

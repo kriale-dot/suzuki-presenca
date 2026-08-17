@@ -1,0 +1,539 @@
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.presencas-filtros {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.presencas-navegacao-data {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+}
+
+
+.presencas-data {
+    width: 200px;
+}
+
+
+.presencas-busca {
+    width: min(
+        420px,
+        100%
+    );
+}
+
+
+.presencas-data-titulo {
+    margin-bottom: 18px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.presencas-data-titulo strong {
+    color: #374151;
+}
+
+
+/* =====================================================
+   RESUMO GERAL
+===================================================== */
+
+.relatorio-presenca-resumo {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+
+.relatorio-presenca-card {
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding:
+        16px
+        18px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 11px;
+
+    background: white;
+}
+
+
+.relatorio-presenca-card span {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.relatorio-presenca-card strong {
+    color: #111827;
+
+    font-size: 24px;
+}
+
+
+.relatorio-presenca-card.presente {
+    border-left:
+        4px
+        solid
+        #57a773;
+}
+
+
+.relatorio-presenca-card.ausente {
+    border-left:
+        4px
+        solid
+        #c46a6a;
+}
+
+
+.relatorio-presenca-card.justificada {
+    border-left:
+        4px
+        solid
+        #c6a44d;
+}
+
+
+.relatorio-presenca-card.pendente {
+    border-left:
+        4px
+        solid
+        #8a94a3;
+}
+
+
+/* =====================================================
+   LISTA DE AULAS
+===================================================== */
+
+.relatorio-presenca-lista {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.relatorio-presenca-aula {
+    display: grid;
+
+    grid-template-columns:
+        82px
+        minmax(180px, 1fr)
+        minmax(320px, auto)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        18px
+        20px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 12px;
+
+    background: white;
+}
+
+
+.relatorio-presenca-aula:hover {
+    border-color: #d0d6dd;
+
+    box-shadow:
+        0
+        2px
+        8px
+        rgba(
+            0,
+            0,
+            0,
+            0.035
+        );
+}
+
+
+/* =====================================================
+   HORA
+===================================================== */
+
+.relatorio-presenca-hora {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.relatorio-presenca-hora strong {
+    color: #111827;
+
+    font-size: 20px;
+}
+
+
+.relatorio-presenca-hora span {
+    color: #8a94a3;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES
+===================================================== */
+
+.relatorio-presenca-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.relatorio-presenca-titulo {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.relatorio-presenca-titulo h2 {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #1f2937;
+
+    font-size: 16px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.relatorio-presenca-info > span {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   NÚMEROS
+===================================================== */
+
+.relatorio-presenca-numeros {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 16px;
+}
+
+
+.relatorio-presenca-numeros > div {
+    min-width: 58px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.relatorio-presenca-numeros span {
+    color: #8a94a3;
+
+    font-size: 10px;
+}
+
+
+.relatorio-presenca-numeros strong {
+    color: #374151;
+
+    font-size: 17px;
+}
+
+
+.relatorio-presenca-mensagem {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.relatorio-presenca-mensagem.cancelada {
+    color: #a43b3b;
+}
+
+
+.relatorio-presenca-mensagem.erro {
+    color: #a43b3b;
+}
+
+
+/* =====================================================
+   AÇÃO
+===================================================== */
+
+.relatorio-presenca-acao {
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+
+.relatorio-presenca-acao a {
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ESTADO VAZIO
+===================================================== */
+
+.presencas-vazio {
+    padding:
+        55px
+        24px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 12px;
+
+    background: white;
+
+    text-align: center;
+}
+
+
+.presencas-vazio strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+}
+
+
+.presencas-vazio p {
+    margin: 0;
+
+    color: #8a94a3;
+
+    font-size: 13px;
+}
+
+
+.presencas-erro {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (
+    max-width: 1150px
+) {
+
+    .relatorio-presenca-resumo {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .relatorio-presenca-aula {
+        grid-template-columns:
+            72px
+            minmax(0, 1fr)
+            auto;
+    }
+
+
+    .relatorio-presenca-numeros {
+        grid-column:
+            2
+            / -1;
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .relatorio-presenca-acao {
+        grid-column:
+            3;
+
+        grid-row:
+            1;
+    }
+
+}
+
+
+@media (
+    max-width: 800px
+) {
+
+    .presencas-filtros {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .presencas-busca {
+        width: 100%;
+    }
+
+
+    .relatorio-presenca-aula {
+        grid-template-columns:
+            64px
+            minmax(0, 1fr);
+    }
+
+
+    .relatorio-presenca-numeros,
+    .relatorio-presenca-acao {
+        grid-column:
+            2;
+
+        grid-row:
+            auto;
+    }
+
+
+    .relatorio-presenca-acao {
+        justify-content:
+            flex-start;
+    }
+
+}
+
+
+@media (
+    max-width: 600px
+) {
+
+    .presencas-navegacao-data {
+        align-items: stretch;
+
+        flex-wrap: wrap;
+    }
+
+
+    .presencas-data {
+        flex:
+            1
+            1
+            180px;
+
+        width: auto;
+    }
+
+
+    .relatorio-presenca-resumo {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .relatorio-presenca-aula {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .relatorio-presenca-hora {
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 8px;
+    }
+
+
+    .relatorio-presenca-numeros,
+    .relatorio-presenca-acao {
+        grid-column:
+            1;
+    }
+
+
+    .relatorio-presenca-numeros {
+        justify-content:
+            flex-start;
+
+        flex-wrap: wrap;
+    }
+
+}

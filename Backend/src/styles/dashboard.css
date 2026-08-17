@@ -1,0 +1,396 @@
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+
+.dashboard-erro {
+    margin-bottom: 22px;
+}
+
+
+
+/* =====================================================
+   ÁREA DO TABLET
+===================================================== */
+
+.dashboard-tablet {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        250px;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+
+    padding:
+        30px
+        34px;
+
+    border:
+        1px
+        solid
+        #dde3e9;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.dashboard-tablet-conteudo {
+    min-width: 0;
+}
+
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.dashboard-tablet-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    padding:
+        5px
+        10px;
+
+    border-radius: 999px;
+
+    background: #eef2f7;
+
+    color: #526173;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.dashboard-tablet-conteudo h2 {
+    margin:
+        0
+        0
+        8px;
+
+    color: #172033;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.dashboard-tablet-conteudo > p {
+    max-width: 650px;
+
+    margin:
+        0
+        0
+        22px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ENDEREÇO
+===================================================== */
+
+.dashboard-tablet-endereco {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+}
+
+
+.dashboard-tablet-endereco > span {
+    color: #7b8796;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.dashboard-tablet-endereco code {
+    max-width: 100%;
+
+    padding:
+        10px
+        12px;
+
+    border:
+        1px
+        solid
+        #dfe5eb;
+
+    border-radius: 8px;
+
+    background: #f7f9fb;
+
+    color: #334155;
+
+    font-family:
+        Consolas,
+        Monaco,
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   AVISO
+===================================================== */
+
+.dashboard-tablet-aviso {
+    max-width: 650px;
+
+    margin-bottom: 20px;
+
+    padding:
+        12px
+        14px;
+
+    border:
+        1px
+        solid
+        #e5d39a;
+
+    border-radius: 8px;
+
+    background: #fffbea;
+
+    color: #735f22;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.dashboard-tablet-botao {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   ÁREA DO QR CODE
+===================================================== */
+
+.dashboard-tablet-qr-area {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   QUADRO DO QR CODE
+===================================================== */
+
+.dashboard-tablet-qr {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px;
+
+    border:
+        1px
+        solid
+        #dde3e9;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0
+        4px
+        14px
+        rgba(
+            15,
+            23,
+            42,
+            0.06
+        );
+}
+
+
+.dashboard-tablet-qr svg {
+    display: block;
+
+    width: 190px;
+
+    height: 190px;
+}
+
+
+/* =====================================================
+   LEGENDA
+===================================================== */
+
+.dashboard-tablet-qr-legenda {
+    color: #7b8796;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   RESPONSIVO - TABLET
+===================================================== */
+
+@media (
+    max-width: 900px
+) {
+
+    .dashboard-tablet {
+        grid-template-columns:
+            minmax(0, 1fr)
+            220px;
+
+        gap: 28px;
+
+        padding: 26px;
+    }
+
+
+    .dashboard-tablet-qr svg {
+        width: 170px;
+
+        height: 170px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - TELAS MENORES
+===================================================== */
+
+@media (
+    max-width: 720px
+) {
+
+    .dashboard-tablet {
+        grid-template-columns:
+            1fr;
+
+        align-items: stretch;
+    }
+
+
+    .dashboard-tablet-qr-area {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - CELULAR
+===================================================== */
+
+@media (
+    max-width: 500px
+) {
+
+    .dashboard-tablet {
+        margin-top: 22px;
+
+        padding: 20px;
+
+        gap: 26px;
+    }
+
+
+    .dashboard-tablet-conteudo h2 {
+        font-size: 19px;
+    }
+
+
+    .dashboard-tablet-botao {
+        width: 100%;
+    }
+
+
+    .dashboard-tablet-qr-area {
+        align-items: center;
+    }
+
+
+    .dashboard-tablet-qr {
+        padding: 12px;
+    }
+
+
+    .dashboard-tablet-qr svg {
+        width: 180px;
+
+        height: 180px;
+    }
+
+}

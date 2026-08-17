@@ -1,0 +1,137 @@
+.modalidades-resumo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.modalidade-resumo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border: 1px solid #e2e6eb;
+    border-radius: 11px;
+    background: #fff;
+}
+
+.modalidade-resumo-card span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.modalidade-resumo-card strong {
+    color: #111827;
+    font-size: 23px;
+}
+
+.modalidades-lista {
+    overflow: hidden;
+}
+
+.modalidade-item {
+    min-height: 86px;
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.modalidade-item:last-child { border-bottom: 0; }
+.modalidade-item:hover { background: #fafbfc; }
+
+.modalidade-icone {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #eef1f5;
+    color: #465469;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modalidade-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modalidade-info strong {
+    overflow: hidden;
+    color: #1f2937;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modalidade-info span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.modalidade-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.modalidade-botao {
+    min-width: 94px;
+}
+
+.modalidades-erro {
+    margin-bottom: 18px;
+}
+
+@media (max-width: 800px) {
+    .modalidade-item {
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+    }
+
+    .modalidade-status {
+        grid-column: 2;
+    }
+
+    .modalidade-acoes {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .modalidades-resumo {
+        grid-template-columns: 1fr;
+    }
+
+    .modalidade-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+        align-items: start;
+        padding: 16px;
+    }
+
+    .modalidade-status,
+    .modalidade-acoes {
+        grid-column: 2;
+        grid-row: auto;
+    }
+
+    .modalidade-acoes {
+        width: 100%;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .modalidade-botao {
+        min-width: 0;
+        flex: 1 1 120px;
+    }
+}

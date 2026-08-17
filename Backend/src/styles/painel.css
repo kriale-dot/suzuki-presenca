@@ -1,0 +1,132 @@
+/* =====================================================
+   QR CODE DE ACESSO NO TABLET
+===================================================== */
+
+.tablet-qrcode-card {
+    margin-top: 24px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 14px;
+}
+
+
+.tablet-qrcode-card-header h2 {
+    margin: 0 0 6px;
+
+    color: #111827;
+
+    font-size: 20px;
+}
+
+
+.tablet-qrcode-card-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    line-height: 1.5;
+}
+
+
+.tablet-qrcode-card-conteudo {
+    margin-top: 18px;
+
+    display: grid;
+
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    gap: 24px;
+
+    align-items: center;
+}
+
+
+.tablet-qrcode-area {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #f9fafb;
+}
+
+
+.tablet-qrcode-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.tablet-qrcode-info label {
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.tablet-qrcode-link-box {
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    background: #f9fafb;
+
+    overflow-x: auto;
+}
+
+
+.tablet-qrcode-link-box code {
+    color: #1f2937;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+.tablet-qrcode-acoes {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.tablet-qrcode-acoes a {
+    text-decoration: none;
+}
+
+
+.tablet-qrcode-aviso {
+    color: #6b7280;
+
+    line-height: 1.5;
+}
+
+
+@media (max-width: 700px) {
+
+    .tablet-qrcode-card-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+}

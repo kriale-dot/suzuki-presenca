@@ -1,0 +1,54 @@
+@media (max-width: 850px) {
+    .admin-layout { display: block; }
+    .sidebar { position: static; width: 100%; min-height: auto; padding: 14px; }
+    .sidebar-logo { padding-bottom: 14px; }
+    .sidebar-menu { overflow-x: auto; flex-direction: row; }
+    .menu-item { flex-shrink: 0; }
+    .sidebar-footer { display: none; }
+    .admin-content { padding: 24px 18px; }
+    .dashboard-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 750px) {
+    .aluno-detalhes-header { align-items: flex-start; flex-direction: column; }
+    .acoes-ficha { width: 100%; }
+    .acoes-ficha button { flex: 1; }
+    .ficha-dados { grid-template-columns: 1fr; }
+    .ficha-campo { min-height: auto; border-right: 0; border-bottom: 1px solid #edf0f3; }
+    .ficha-campo:last-child { border-bottom: 0; }
+    .ficha-formulario { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .matricula-item { grid-template-columns: 42px minmax(0, 1fr) auto; gap: 12px; padding: 16px; }
+    .matricula-sala { grid-column: 2; }
+    .matricula-acoes { grid-column: 3; grid-row: 1 / span 2; }
+}
+
+@media (max-width: 600px) {
+    .pagina-header { align-items: stretch; flex-direction: column; }
+    .barra-ferramentas { align-items: stretch; flex-direction: column; }
+    .campo-busca { width: 100%; }
+    .aluno-item { grid-template-columns: 48px minmax(0, 1fr) 40px; gap: 12px; padding: 14px 12px; }
+    .aluno-status { grid-column: 2; }
+    /* O link da ficha permanece visível no celular. */
+    .botao-detalhes { display: grid; grid-column: 3; grid-row: 1 / span 2; align-self: center; }
+    .modal-overlay { padding: 14px; }
+    .modal-header, .modal-body { padding: 20px; }
+    .modal-footer { padding: 16px 20px; flex-direction: column-reverse; }
+    .modal-footer button { width: 100%; }
+    .toast-sucesso { left: 14px; right: 14px; top: 14px; }
+}
+
+@media (max-width: 500px) {
+    .aluno-identidade { align-items: flex-start; }
+    .aluno-avatar.grande { width: 58px; height: 58px; font-size: 16px; }
+    .aluno-identidade h1 { font-size: 23px; }
+    .acoes-ficha { flex-direction: column; }
+    .ficha-card-header { align-items: flex-start; flex-direction: column; }
+    .ficha-formulario-acoes { flex-direction: column-reverse; }
+    .ficha-formulario-acoes button { width: 100%; }
+    .matricula-item { grid-template-columns: 42px minmax(0, 1fr); }
+    .matricula-sala, .matricula-acoes { grid-column: 2; }
+    .matricula-acoes { grid-row: auto; align-items: flex-start; }
+}

@@ -1,0 +1,2533 @@
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.agenda-filtros {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+
+.agenda-data {
+    width: 220px;
+}
+
+
+/* =====================================================
+   NAVEGAÇÃO DE DATA
+===================================================== */
+
+.agenda-seta-data {
+    width: 52px;
+    min-width: 52px;
+    height: 46px;
+
+    padding: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.agenda-hoje {
+    min-width: 70px;
+    height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   MODOS DIA / SEMANA / MÊS
+===================================================== */
+
+.agenda-modos {
+    margin-left: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px;
+
+    border:
+        1px
+        solid
+        #d9dee5;
+
+    border-radius: 10px;
+
+    background: #eef1f5;
+}
+
+
+.agenda-modo {
+    min-width: 78px;
+    height: 36px;
+
+    padding:
+        0
+        14px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.agenda-modo:hover {
+    color: #344054;
+}
+
+
+.agenda-modo.ativo {
+    background: white;
+
+    color: #1f2937;
+
+    box-shadow:
+        0
+        1px
+        3px
+        rgba(
+            15,
+            23,
+            42,
+            0.12
+        );
+}
+
+
+.agenda-periodo-atual {
+    margin:
+        -8px
+        0
+        18px;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RESUMO
+===================================================== */
+
+.agenda-resumo,
+.presenca-resumo {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+
+.presenca-resumo {
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+}
+
+
+.agenda-resumo-card,
+.presenca-resumo-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding:
+        16px
+        18px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 11px;
+
+    background: white;
+}
+
+
+.agenda-resumo-card span,
+.presenca-resumo-card span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.agenda-resumo-card strong,
+.presenca-resumo-card strong {
+    color: #111827;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   AGENDA
+===================================================== */
+
+.agenda-lista {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   VISUALIZAÇÃO POR SEMANA / MÊS
+===================================================== */
+
+.agenda-periodos-lista {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+.agenda-dia-grupo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.agenda-dia-header {
+    min-height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding:
+        0
+        2px;
+}
+
+
+.agenda-dia-header > div {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.agenda-dia-header h2 {
+    margin: 0;
+
+    color: #344054;
+
+    font-size: 15px;
+
+    font-weight: 750;
+}
+
+
+.agenda-dia-grupo.hoje
+.agenda-dia-header h2 {
+    color: #1d4f7a;
+}
+
+
+.agenda-dia-hoje {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        3px
+        8px;
+
+    border-radius: 999px;
+
+    background: #e8f2fb;
+
+    color: #31678f;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.agenda-dia-contagem {
+    color: #98a2b3;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.agenda-dia-vazio {
+    padding:
+        15px
+        18px;
+
+    border:
+        1px
+        dashed
+        #d8dde4;
+
+    border-radius: 10px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.55
+    );
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+
+.agenda-aula-card {
+    display: grid;
+
+    grid-template-columns:
+        86px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding:
+        18px
+        20px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 12px;
+
+    background: white;
+}
+
+
+.agenda-aula-card:hover {
+    border-color: #d2d8df;
+}
+
+
+.agenda-hora {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.agenda-hora strong {
+    color: #111827;
+
+    font-size: 22px;
+}
+
+
+.agenda-hora span {
+    color: #8a94a3;
+
+    font-size: 13px;
+}
+
+
+.agenda-aula-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.agenda-aula-titulo {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.agenda-aula-titulo h2 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 17px;
+}
+
+
+.agenda-aula-info span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.agenda-aula-info small {
+    color: #9ca3af;
+}
+
+
+.agenda-acoes {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.agenda-acoes a {
+    text-decoration: none;
+}
+
+
+.agenda-vazia {
+    padding: 50px 24px;
+
+    border:
+        1px
+        solid
+        #e2e6eb;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #6b7280;
+
+    text-align: center;
+}
+
+
+.agenda-vazia strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+
+.agenda-vazia p {
+    margin: 0;
+}
+
+
+.agenda-erro,
+.aula-erro {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   STATUS DA AULA
+===================================================== */
+
+.aula-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        5px
+        9px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+
+.aula-status.agendada {
+    background: #eef2ff;
+
+    color: #4656a6;
+}
+
+
+.aula-status.aberta {
+    background: #e8f7ee;
+
+    color: #287a47;
+}
+
+
+.aula-status.encerrada {
+    background: #f2f3f5;
+
+    color: #626b78;
+}
+
+
+.aula-status.cancelada {
+    background: #fff0f0;
+
+    color: #a43b3b;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.aula-horarios-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.campo-formulario textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border:
+        1px
+        solid
+        #d1d5db;
+
+    border-radius: 8px;
+
+    outline: 0;
+
+    resize: vertical;
+
+    font: inherit;
+}
+
+
+.campo-formulario textarea:focus {
+    border-color: #667085;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            102,
+            112,
+            133,
+            0.12
+        );
+}
+
+
+.cancelar-aula-aviso {
+    padding: 14px 16px;
+
+    border:
+        1px
+        solid
+        #efc9c9;
+
+    border-radius: 9px;
+
+    background: #fff5f5;
+
+    color: #8d3d3d;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   AULA / PRESENÇAS
+===================================================== */
+
+.aula-detalhes-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+}
+
+
+.aula-detalhes-header h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 28px;
+}
+
+
+.aula-detalhes-header p {
+    margin:
+        7px
+        0
+        4px;
+
+    color: #6b7280;
+}
+
+
+.aula-professor {
+    color: #8a94a3;
+
+    font-size: 13px;
+}
+
+
+.aula-detalhes-acoes {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.presenca-lista {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.presenca-item {
+    min-height: 84px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        14px
+        22px;
+
+    border-bottom:
+        1px
+        solid
+        #edf0f3;
+}
+
+
+.presenca-item:last-child {
+    border-bottom: 0;
+}
+
+
+.presenca-aluno {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.presenca-aluno strong {
+    color: #1f2937;
+}
+
+
+.presenca-aluno span {
+    color: #8a94a3;
+
+    font-size: 12px;
+}
+
+
+.presenca-badge {
+    display: inline-flex;
+
+    padding:
+        5px
+        9px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.presenca-badge.presente {
+    background: #e8f7ee;
+
+    color: #287a47;
+}
+
+
+.presenca-badge.ausente {
+    background: #fff0f0;
+
+    color: #a43b3b;
+}
+
+
+.presenca-badge.justificada {
+    background: #fff8df;
+
+    color: #80681d;
+}
+
+
+.presenca-badge.nao-registrada {
+    background: #f2f3f5;
+
+    color: #626b78;
+}
+
+
+.presenca-acoes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.botao-presenca {
+    border:
+        1px
+        solid
+        #d1d5db;
+
+    border-radius: 7px;
+
+    padding:
+        8px
+        10px;
+
+    background: white;
+
+    color: #4b5563;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.botao-presenca:hover:not(:disabled) {
+    background: #f5f6f7;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (
+    max-width: 950px
+) {
+
+    .presenca-resumo {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .presenca-item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+    }
+
+
+    .presenca-acoes {
+        grid-column:
+            1
+            / -1;
+    }
+
+}
+
+
+@media (
+    max-width: 750px
+) {
+
+    .agenda-aula-card {
+        grid-template-columns:
+            70px
+            minmax(0, 1fr);
+    }
+
+
+    .agenda-acoes {
+        grid-column:
+            2;
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .aula-detalhes-header {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+}
+
+
+@media (
+    max-width: 550px
+) {
+
+    /*
+     * Mantemos a navegação da data organizada
+     * horizontalmente também em telas menores.
+     */
+
+    .agenda-filtros {
+        display: grid;
+
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            48px
+            auto;
+
+        align-items: end;
+
+        gap: 8px;
+    }
+
+
+    .agenda-data {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .agenda-seta-data {
+        width: 48px;
+        min-width: 48px;
+    }
+
+
+    .agenda-hoje {
+        min-width: 64px;
+    }
+
+
+    .agenda-modos {
+        grid-column:
+            1
+            / -1;
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .agenda-modo {
+        min-width: 0;
+
+        flex: 1;
+    }
+
+
+    .agenda-periodo-atual {
+        margin-top: -6px;
+    }
+
+
+    .agenda-dia-header {
+        align-items: flex-start;
+    }
+
+
+    .agenda-resumo,
+    .presenca-resumo {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .agenda-aula-card {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .agenda-hora {
+        flex-direction:
+            row;
+
+        align-items:
+            baseline;
+
+        gap: 8px;
+    }
+
+
+    .agenda-acoes {
+        grid-column:
+            1;
+    }
+
+
+    .aula-horarios-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .presenca-item {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .presenca-acoes,
+    .presenca-situacao {
+        grid-column:
+            1;
+    }
+
+}
+
+
+@media (
+    max-width: 420px
+) {
+
+    /*
+     * Em celulares muito estreitos, o botão Hoje
+     * ocupa uma segunda linha.
+     */
+
+    .agenda-filtros {
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            48px;
+    }
+
+
+    .agenda-hoje {
+        grid-column:
+            1
+            / -1;
+
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   INTEGRAÇÃO COM TABLET
+===================================================== */
+
+.botao-tablet {
+    min-height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        0
+        14px;
+
+    border:
+        1px
+        solid
+        #aebed0;
+
+    border-radius: 8px;
+
+    background: #eef4fa;
+
+    color: #42576e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+
+
+.botao-tablet:hover {
+    border-color: #8fa5bd;
+
+    background: #e3edf7;
+}
+
+
+.aula-tablet-aviso {
+    display: grid;
+
+    grid-template-columns:
+        48px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+    padding:
+        14px
+        17px;
+
+    border:
+        1px
+        solid
+        #cbdbea;
+
+    border-radius: 11px;
+
+    background: #f5f9fd;
+}
+
+
+.aula-tablet-aviso-icone {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #e2edf7;
+
+    color: #4b637c;
+
+    font-size: 19px;
+}
+
+
+.aula-tablet-aviso > div:nth-child(2) {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.aula-tablet-aviso strong {
+    color: #34495e;
+
+    font-size: 13px;
+}
+
+
+.aula-tablet-aviso span {
+    color: #718397;
+
+    font-size: 12px;
+}
+
+
+@media (
+    max-width: 650px
+) {
+
+    .aula-detalhes-acoes {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .aula-detalhes-acoes button {
+        width: 100%;
+    }
+
+
+    .aula-tablet-aviso {
+        grid-template-columns:
+            44px
+            minmax(0, 1fr);
+    }
+
+
+    .aula-tablet-aviso button {
+        grid-column: 2;
+
+        justify-self: start;
+    }
+
+}
+
+
+/* =====================================================
+   GERAÇÃO AUTOMÁTICA DE AULAS
+===================================================== */
+
+.agenda-header-acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.geracao-periodo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.geracao-aulas-aviso {
+    padding:
+        14px
+        16px;
+
+    border:
+        1px
+        solid
+        #cfddeb;
+
+    border-radius: 9px;
+
+    background: #f5f9fd;
+
+    color: #53687d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+@media (
+    max-width: 600px
+) {
+
+    .agenda-header-acoes {
+        width: 100%;
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .geracao-periodo-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}/* =====================================================
+   FILTROS DA AGENDA
+===================================================== */
+
+.agenda-filtros {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+
+.agenda-data {
+    width: 220px;
+}
+
+
+/* =====================================================
+   NAVEGAÇÃO DE DATA
+===================================================== */
+
+.agenda-seta-data {
+    width: 52px;
+    min-width: 52px;
+    height: 46px;
+
+    padding: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.agenda-hoje {
+    min-width: 70px;
+    height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   RESUMO DA AGENDA / PRESENÇAS
+===================================================== */
+
+.agenda-resumo,
+.presenca-resumo {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+
+.presenca-resumo {
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+}
+
+
+.agenda-resumo-card,
+.presenca-resumo-card {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding: 16px 18px;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+}
+
+
+.agenda-resumo-card span,
+.presenca-resumo-card span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.agenda-resumo-card strong,
+.presenca-resumo-card strong {
+    color: #111827;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   LISTA DA AGENDA
+===================================================== */
+
+.agenda-lista {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   CARD DA AULA
+===================================================== */
+
+.agenda-aula-card {
+    display: grid;
+
+    grid-template-columns:
+        86px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.agenda-aula-card:hover {
+    border-color: #d2d8df;
+}
+
+
+/* =====================================================
+   HORÁRIO DA AULA
+===================================================== */
+
+.agenda-hora {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.agenda-hora strong {
+    color: #111827;
+
+    font-size: 22px;
+}
+
+
+.agenda-hora span {
+    color: #8a94a3;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   INFORMAÇÕES DA AULA
+===================================================== */
+
+.agenda-aula-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.agenda-aula-titulo {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.agenda-aula-titulo h2 {
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 17px;
+}
+
+
+.agenda-aula-info > span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.agenda-aula-info small {
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   AÇÕES DA AGENDA
+===================================================== */
+
+.agenda-acoes {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.agenda-acoes a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   AGENDA VAZIA
+===================================================== */
+
+.agenda-vazia {
+    padding: 50px 24px;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #6b7280;
+
+    text-align: center;
+}
+
+
+.agenda-vazia strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+
+.agenda-vazia p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   ERROS
+===================================================== */
+
+.agenda-erro,
+.aula-erro {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   STATUS DA AULA
+===================================================== */
+
+.aula-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+}
+
+
+.aula-status.agendada {
+    background: #eef2ff;
+
+    color: #4656a6;
+}
+
+
+.aula-status.aberta {
+    background: #e8f7ee;
+
+    color: #287a47;
+}
+
+
+.aula-status.encerrada {
+    background: #f2f3f5;
+
+    color: #626b78;
+}
+
+
+.aula-status.cancelada {
+    background: #fff0f0;
+
+    color: #a43b3b;
+}
+
+
+/* =====================================================
+   TÍTULO + STATUS
+===================================================== */
+
+.titulo-com-status {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.titulo-com-status h1 {
+    margin: 0;
+}
+
+
+/* =====================================================
+   MODAL DE AULA
+===================================================== */
+
+.aula-horarios-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.campo-formulario textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: 0;
+
+    resize: vertical;
+
+    font: inherit;
+}
+
+
+.campo-formulario textarea:focus {
+    border-color: #667085;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            102,
+            112,
+            133,
+            0.12
+        );
+}
+
+
+.cancelar-aula-aviso {
+    padding: 14px 16px;
+
+    border: 1px solid #efc9c9;
+
+    border-radius: 9px;
+
+    background: #fff5f5;
+
+    color: #8d3d3d;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DETALHES DA AULA
+===================================================== */
+
+.aula-detalhes-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 28px;
+}
+
+
+.aula-detalhes-header h1 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 28px;
+}
+
+
+.aula-detalhes-header p {
+    margin: 7px 0 4px;
+
+    color: #6b7280;
+}
+
+
+.aula-professor {
+    color: #8a94a3;
+
+    font-size: 13px;
+}
+
+
+.aula-detalhes-acoes {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* =====================================================
+   LINK VOLTAR
+===================================================== */
+
+.voltar-link {
+    display: inline-flex;
+
+    margin-bottom: 22px;
+
+    color: #53687d;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.voltar-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   CARD DA FICHA
+===================================================== */
+
+.ficha-card {
+    overflow: hidden;
+
+    border: 1px solid #e2e6eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.ficha-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+
+.ficha-card-header h2 {
+    margin: 0 0 4px;
+
+    color: #1f2937;
+
+    font-size: 17px;
+}
+
+
+.ficha-card-header p {
+    margin: 0;
+
+    color: #7b8796;
+
+    font-size: 13px;
+}
+
+
+.ficha-vazio {
+    padding: 40px 22px;
+
+    color: #6b7280;
+
+    text-align: center;
+}
+
+
+.ficha-vazio strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #374151;
+}
+
+
+.ficha-vazio p {
+    margin: 0;
+}
+
+
+/* =====================================================
+   LISTA DE PRESENÇAS
+===================================================== */
+
+.presenca-lista {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.presenca-item {
+    min-height: 84px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px 22px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+
+.presenca-item:last-child {
+    border-bottom: 0;
+}
+
+
+/* =====================================================
+   ALUNO
+===================================================== */
+
+.presenca-aluno {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.presenca-aluno strong {
+    color: #1f2937;
+}
+
+
+.presenca-aluno span {
+    color: #8a94a3;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   SITUAÇÃO
+===================================================== */
+
+.presenca-situacao {
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   BADGES DE PRESENÇA
+===================================================== */
+
+.presenca-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.presenca-badge.presente {
+    background: #e8f7ee;
+
+    color: #287a47;
+}
+
+
+.presenca-badge.ausente {
+    background: #fff0f0;
+
+    color: #a43b3b;
+}
+
+
+.presenca-badge.justificada {
+    background: #fff8df;
+
+    color: #80681d;
+}
+
+
+.presenca-badge.nao-registrada {
+    background: #f2f3f5;
+
+    color: #626b78;
+}
+
+
+/* =====================================================
+   AÇÕES DE PRESENÇA
+===================================================== */
+
+.presenca-acoes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.botao-presenca {
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    padding: 8px 10px;
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.botao-presenca:hover:not(:disabled) {
+    background: #f5f6f7;
+}
+
+
+.botao-presenca:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   BOTÃO DO TABLET
+===================================================== */
+
+.botao-tablet {
+    min-height: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 14px;
+
+    border: 1px solid #aebed0;
+
+    border-radius: 8px;
+
+    background: #eef4fa;
+
+    color: #42576e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s,
+        border-color 0.15s;
+}
+
+
+.botao-tablet:hover {
+    border-color: #8fa5bd;
+
+    background: #e3edf7;
+}
+
+
+/* =====================================================
+   AVISO DO TABLET DA AULA
+===================================================== */
+
+.aula-tablet-aviso {
+    display: grid;
+
+    grid-template-columns:
+        48px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+
+    padding: 16px 18px;
+
+    border: 1px solid #cbdbea;
+
+    border-radius: 11px;
+
+    background: #f5f9fd;
+}
+
+
+/* =====================================================
+   ÍCONE DO TABLET
+===================================================== */
+
+.aula-tablet-aviso-icone {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    align-self: start;
+
+    border-radius: 10px;
+
+    background: #e2edf7;
+
+    color: #4b637c;
+
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   CONTEÚDO DO AVISO
+===================================================== */
+
+.aula-tablet-aviso-conteudo {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+}
+
+
+.aula-tablet-aviso-conteudo strong {
+    color: #34495e;
+
+    font-size: 13px;
+}
+
+
+.aula-tablet-aviso-conteudo > span {
+    color: #718397;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   URL DO TABLET
+===================================================== */
+
+.aula-tablet-url {
+    max-width: 100%;
+
+    margin-top: 6px;
+
+    color: #8a98a8;
+
+    font-family:
+        Consolas,
+        Monaco,
+        monospace;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   AÇÕES DO TABLET
+===================================================== */
+
+.aula-tablet-acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   QR CODE DA AULA
+===================================================== */
+
+.aula-tablet-qrcode {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px;
+
+    border: 1px solid #d7e1ea;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+
+.aula-tablet-qrcode svg {
+    display: block;
+
+    width: 118px;
+
+    height: 118px;
+}
+
+
+.aula-tablet-qrcode span {
+    color: #7b8796;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   GERAÇÃO AUTOMÁTICA DE AULAS
+===================================================== */
+
+.agenda-header-acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.geracao-periodo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+.geracao-aulas-aviso {
+    padding: 14px 16px;
+
+    border: 1px solid #cfddeb;
+
+    border-radius: 9px;
+
+    background: #f5f9fd;
+
+    color: #53687d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 950px
+===================================================== */
+
+@media (
+    max-width: 950px
+) {
+
+    .presenca-resumo {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .presenca-item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+    }
+
+
+    .presenca-acoes {
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 800px
+===================================================== */
+
+@media (
+    max-width: 800px
+) {
+
+    .aula-tablet-aviso {
+        grid-template-columns:
+            44px
+            minmax(0, 1fr);
+    }
+
+
+    .aula-tablet-acoes {
+        grid-column: 2;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 750px
+===================================================== */
+
+@media (
+    max-width: 750px
+) {
+
+    .agenda-aula-card {
+        grid-template-columns:
+            70px
+            minmax(0, 1fr);
+    }
+
+
+    .agenda-acoes {
+        grid-column: 2;
+
+        justify-content: flex-start;
+    }
+
+
+    .aula-detalhes-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .aula-detalhes-acoes {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 650px
+===================================================== */
+
+@media (
+    max-width: 650px
+) {
+
+    .aula-detalhes-acoes {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .aula-detalhes-acoes button {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 600px
+===================================================== */
+
+@media (
+    max-width: 600px
+) {
+
+    .agenda-header-acoes {
+        width: 100%;
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .agenda-header-acoes button {
+        width: 100%;
+    }
+
+
+    .geracao-periodo-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 550px
+===================================================== */
+
+@media (
+    max-width: 550px
+) {
+
+    /* ---------------------------------------------
+       NAVEGAÇÃO DE DATA
+    ---------------------------------------------- */
+
+    .agenda-filtros {
+        display: grid;
+
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            48px
+            auto;
+
+        align-items: end;
+
+        gap: 8px;
+    }
+
+
+    .agenda-data {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .agenda-seta-data {
+        width: 48px;
+
+        min-width: 48px;
+    }
+
+
+    .agenda-hoje {
+        min-width: 64px;
+    }
+
+
+    /* ---------------------------------------------
+       RESUMO
+    ---------------------------------------------- */
+
+    .agenda-resumo,
+    .presenca-resumo {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------------------------------------------
+       CARD DA AULA
+    ---------------------------------------------- */
+
+    .agenda-aula-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .agenda-hora {
+        flex-direction: row;
+
+        align-items: baseline;
+
+        gap: 8px;
+    }
+
+
+    .agenda-acoes {
+        grid-column: 1;
+
+        justify-content: flex-start;
+    }
+
+
+    /* ---------------------------------------------
+       MODAL
+    ---------------------------------------------- */
+
+    .aula-horarios-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------------------------------------------
+       PRESENÇA
+    ---------------------------------------------- */
+
+    .presenca-item {
+        grid-template-columns: 1fr;
+    }
+
+
+    .presenca-acoes,
+    .presenca-situacao {
+        grid-column: 1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - TABLET DA AULA - ATÉ 520px
+===================================================== */
+
+@media (
+    max-width: 520px
+) {
+
+    .aula-tablet-aviso {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aula-tablet-aviso-icone {
+        display: none;
+    }
+
+
+    .aula-tablet-acoes {
+        grid-column: 1;
+
+        width: 100%;
+
+        align-items: center;
+    }
+
+
+    .aula-tablet-acoes button {
+        width: 100%;
+    }
+
+
+    .aula-tablet-qrcode {
+        align-self: center;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVO - ATÉ 420px
+===================================================== */
+
+@media (
+    max-width: 420px
+) {
+
+    .agenda-filtros {
+        grid-template-columns:
+            48px
+            minmax(0, 1fr)
+            48px;
+    }
+
+
+    .agenda-hoje {
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+}

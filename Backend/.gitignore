@@ -1,0 +1,8 @@
+.env
+*.log
+/vendor/
+
+# Fotos são dados da aplicação, não código-fonte.
+/public/uploads/alunos/*
+!/public/uploads/alunos/.htaccess
+!/public/uploads/alunos/.gitkeep

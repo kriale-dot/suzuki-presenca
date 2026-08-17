@@ -1,0 +1,1166 @@
+/* =====================================================
+   TELA PRINCIPAL
+===================================================== */
+
+.tablet-presenca-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f9fc 0%,
+            #eef3f8 100%
+        );
+
+    color: #1f2937;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    user-select: none;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.tablet-header {
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        18px
+        32px;
+
+    border-bottom:
+        1px
+        solid
+        rgba(
+            31,
+            41,
+            55,
+            0.08
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+}
+
+
+.tablet-marca {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.tablet-marca-icone {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: #303947;
+
+    color: white;
+
+    font-size: 23px;
+}
+
+
+.tablet-marca > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.tablet-marca strong {
+    color: #202936;
+
+    font-size: 18px;
+}
+
+
+.tablet-marca span {
+    color: #8490a0;
+
+    font-size: 12px;
+}
+
+
+.tablet-aula-info {
+    display: flex;
+
+    align-items: flex-end;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-align: right;
+}
+
+
+.tablet-aula-info strong {
+    color: #303947;
+
+    font-size: 17px;
+}
+
+
+.tablet-aula-info span {
+    color: #758193;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.tablet-conteudo {
+    width: 100%;
+
+    max-width: 1280px;
+
+    flex: 1;
+
+    margin: 0 auto;
+
+    padding:
+        34px
+        32px
+        40px;
+}
+
+
+/* =====================================================
+   INSTRUÇÃO
+===================================================== */
+
+.tablet-instrucao {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 17px;
+
+    margin-bottom: 32px;
+
+    text-align: left;
+}
+
+
+.tablet-instrucao-icone {
+    font-size: 39px;
+}
+
+
+.tablet-instrucao h1 {
+    margin: 0;
+
+    color: #202936;
+
+    font-size: 32px;
+
+    line-height: 1.1;
+}
+
+
+.tablet-instrucao p {
+    margin:
+        7px
+        0
+        0;
+
+    color: #758193;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   GRID DE ALUNOS
+===================================================== */
+
+.tablet-alunos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARTÃO DO ALUNO
+===================================================== */
+
+.tablet-aluno-card {
+    position: relative;
+
+    min-height: 235px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding:
+        20px;
+
+    border:
+        2px
+        solid
+        transparent;
+
+    border-radius: 22px;
+
+    background: white;
+
+    box-shadow:
+        0
+        7px
+        20px
+        rgba(
+            37,
+            49,
+            65,
+            0.08
+        );
+
+    color: inherit;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    -webkit-touch-callout: none;
+
+    transition:
+        transform 0.12s,
+        box-shadow 0.12s,
+        border-color 0.12s;
+}
+
+
+.tablet-aluno-card:not(:disabled):active {
+    transform:
+        scale(0.97);
+
+    box-shadow:
+        0
+        3px
+        10px
+        rgba(
+            37,
+            49,
+            65,
+            0.09
+        );
+}
+
+
+@media (
+    hover: hover
+) {
+
+    .tablet-aluno-card:not(:disabled):hover {
+        border-color: #b9c8da;
+
+        transform:
+            translateY(-2px);
+    }
+
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.tablet-aluno-avatar {
+    width: 105px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2e9f2,
+            #f1f5f9
+        );
+
+    color: #526176;
+
+    font-size: 31px;
+
+    font-weight: 800;
+}
+
+
+.tablet-aluno-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   NOME
+===================================================== */
+
+.tablet-aluno-nome {
+    max-width: 100%;
+
+    color: #202936;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.tablet-aluno-status {
+    min-height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding:
+        7px
+        11px;
+
+    border-radius: 999px;
+
+    background: #edf3f8;
+
+    color: #526176;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PRESENÇA REGISTRADA
+===================================================== */
+
+.tablet-aluno-card.registrado {
+    background: #f4fbf6;
+
+    border-color: #c6e6d0;
+
+    box-shadow: none;
+
+    cursor: pointer;
+}
+
+
+.tablet-aluno-card.registrado:active {
+    transform: none;
+}
+
+
+.tablet-aluno-card.registrado
+.tablet-aluno-avatar {
+    background: #dff2e5;
+
+    color: #2e7950;
+}
+
+
+.tablet-aluno-card.registrado
+.tablet-aluno-status {
+    background: #dff2e5;
+
+    color: #277248;
+}
+
+
+/* =====================================================
+   TOQUE LONGO PARA CORRIGIR PRESENÇA
+===================================================== */
+
+.tablet-aluno-card.pressionando {
+    border-color: #e3b653;
+
+    box-shadow:
+        0
+        0
+        0
+        4px
+        rgba(
+            227,
+            182,
+            83,
+            0.16
+        );
+}
+
+
+.tablet-aluno-card.pressionando::after {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 7px;
+
+    background: #d8a83e;
+
+    animation:
+        tablet-segurar-5s
+        5s
+        linear
+        forwards;
+}
+
+
+.tablet-aluno-card.desmarcando {
+    opacity: 0.72;
+
+    cursor: wait;
+}
+
+
+.tablet-status-textos {
+    display: flex;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 1px;
+
+    text-align: left;
+}
+
+
+.tablet-status-textos strong {
+    font-size: 12px;
+}
+
+
+.tablet-status-textos small {
+    color: #5f846c;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+@keyframes tablet-segurar-5s {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   REGISTRO QUE PRECISA DO PROFESSOR
+===================================================== */
+
+.tablet-aluno-card.verificar {
+    background: #fffaf0;
+
+    border-color: #ead8aa;
+
+    box-shadow: none;
+
+    cursor: default;
+}
+
+
+.tablet-aluno-card.verificar
+.tablet-aluno-status {
+    background: #f6eacb;
+
+    color: #80671d;
+}
+
+
+/* =====================================================
+   AVISOS
+===================================================== */
+
+.tablet-aviso {
+    max-width: 760px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin:
+        0
+        auto
+        24px;
+
+    padding:
+        14px
+        18px;
+
+    border:
+        1px
+        solid
+        #e7caca;
+
+    border-radius: 12px;
+
+    background: #fff5f5;
+
+    color: #8c4444;
+
+    text-align: center;
+}
+
+
+.tablet-aviso strong {
+    font-size: 13px;
+}
+
+
+.tablet-aviso span {
+    font-size: 12px;
+}
+
+
+.tablet-aviso-registro {
+    border-color: #ecd8aa;
+
+    background: #fffaf0;
+
+    color: #795f20;
+}
+
+
+.tablet-aviso-sucesso {
+    border-color: #b9dfc6;
+
+    background: #f1faf4;
+
+    color: #2f7449;
+}
+
+
+/* =====================================================
+   CONFIRMAÇÃO
+===================================================== */
+
+.tablet-confirmacao-page {
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eaf8ef,
+            #f8fcf9
+        );
+}
+
+
+.tablet-confirmacao {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 40px;
+
+    text-align: center;
+
+    animation:
+        tablet-confirmacao-entrada
+        0.25s
+        ease-out;
+}
+
+
+.tablet-confirmacao-check {
+    width: 150px;
+    height: 150px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 28px;
+
+    border-radius: 50%;
+
+    background: #4f9e6b;
+
+    box-shadow:
+        0
+        18px
+        42px
+        rgba(
+            79,
+            158,
+            107,
+            0.25
+        );
+
+    color: white;
+
+    font-size: 82px;
+
+    font-weight: 800;
+}
+
+
+.tablet-confirmacao h1 {
+    margin: 0;
+
+    color: #245e3a;
+
+    font-size: 45px;
+}
+
+
+.tablet-confirmacao p {
+    margin:
+        13px
+        0
+        10px;
+
+    color: #4d7159;
+
+    font-size: 22px;
+}
+
+
+.tablet-confirmacao span {
+    color: #70917b;
+
+    font-size: 18px;
+}
+
+
+@keyframes tablet-confirmacao-entrada {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   ESTADOS CENTRAIS
+===================================================== */
+
+.tablet-estado-central,
+.tablet-sem-alunos {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 50px;
+
+    text-align: center;
+}
+
+
+.tablet-estado-central {
+    min-height: 100vh;
+}
+
+
+.tablet-estado-central h1,
+.tablet-sem-alunos h2 {
+    margin:
+        18px
+        0
+        8px;
+
+    color: #303947;
+}
+
+
+.tablet-estado-central p,
+.tablet-sem-alunos p {
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #758193;
+
+    line-height: 1.5;
+}
+
+
+.tablet-estado-icone {
+    width: 88px;
+    height: 88px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0
+        8px
+        24px
+        rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+    color: #536176;
+
+    font-size: 38px;
+}
+
+
+.tablet-sem-alunos > span {
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   BOTÃO TENTAR NOVAMENTE
+===================================================== */
+
+.tablet-botao-tentar {
+    margin-top: 22px;
+
+    padding:
+        13px
+        20px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #303947;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SPINNERS
+===================================================== */
+
+.tablet-spinner {
+    width: 48px;
+    height: 48px;
+
+    border:
+        5px
+        solid
+        #dce3eb;
+
+    border-top-color:
+        #536176;
+
+    border-radius: 50%;
+
+    animation:
+        tablet-girar
+        0.75s
+        linear
+        infinite;
+}
+
+
+.tablet-mini-spinner {
+    width: 13px;
+    height: 13px;
+
+    border:
+        2px
+        solid
+        rgba(
+            82,
+            97,
+            118,
+            0.25
+        );
+
+    border-top-color:
+        #526176;
+
+    border-radius: 50%;
+
+    animation:
+        tablet-girar
+        0.65s
+        linear
+        infinite;
+}
+
+
+@keyframes tablet-girar {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.tablet-footer {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        10px
+        32px;
+
+    color: #9aa4b1;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   TABLETS MENORES
+===================================================== */
+
+@media (
+    max-width: 1050px
+) {
+
+    .tablet-alunos-grid {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+/* =====================================================
+   TABLET RETRATO
+===================================================== */
+
+@media (
+    max-width: 760px
+) {
+
+    .tablet-header {
+        padding:
+            15px
+            20px;
+    }
+
+
+    .tablet-conteudo {
+        padding:
+            27px
+            20px
+            32px;
+    }
+
+
+    .tablet-instrucao h1 {
+        font-size: 27px;
+    }
+
+
+    .tablet-alunos-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .tablet-aluno-card {
+        min-height: 215px;
+    }
+
+
+    .tablet-footer {
+        padding:
+            10px
+            20px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR / TESTES
+===================================================== */
+
+@media (
+    max-width: 500px
+) {
+
+    .tablet-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .tablet-aula-info {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .tablet-instrucao {
+        justify-content: flex-start;
+    }
+
+
+    .tablet-alunos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tablet-aluno-card {
+        min-height: 200px;
+    }
+
+
+    .tablet-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+}
+
+/* =====================================================
+   TELA CHEIA
+===================================================== */
+
+.tablet-header-direita {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.tablet-tela-cheia {
+    min-height: 40px;
+
+    padding:
+        0
+        13px;
+
+    border:
+        1px
+        solid
+        #d4dce5;
+
+    border-radius: 9px;
+
+    background: #f6f8fa;
+
+    color: #536176;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+}
+
+
+.tablet-tela-cheia:hover {
+    background: #edf1f5;
+}
+
+
+@media (
+    max-width: 760px
+) {
+
+    .tablet-header-direita {
+        align-items: flex-end;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+
+@media (
+    max-width: 500px
+) {
+
+    .tablet-header-direita {
+        width: 100%;
+
+        align-items: flex-start;
+    }
+
+}
+/* =====================================================
+   FOTO NA CONFIRMAÇÃO DE PRESENÇA
+===================================================== */
+
+.tablet-confirmacao-avatar {
+    width: 132px;
+    height: 132px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    background: #e4f1e8;
+    box-shadow: 0 12px 30px rgba(45, 94, 61, 0.14);
+    color: #2f7650;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.tablet-confirmacao-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.tablet-confirmacao-avatar + .tablet-confirmacao-check {
+    width: 74px;
+    height: 74px;
+    margin-bottom: 20px;
+    font-size: 42px;
+}
+
+@media (max-width: 600px) {
+    .tablet-confirmacao-avatar {
+        width: 112px;
+        height: 112px;
+        font-size: 32px;
+    }
+}
