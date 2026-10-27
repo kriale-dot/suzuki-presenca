@@ -594,6 +594,125 @@
 }
 
 
+/* =====================================================
+   FREQUÊNCIA DOS ALUNOS
+===================================================== */
+
+.turma-frequencia-legenda {
+    padding:
+        10px
+        24px;
+
+    border-bottom:
+        1px
+        solid
+        #edf0f3;
+
+    background: #fafbfc;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+.turma-aluno-frequencia {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(100px, 1fr)
+        );
+
+    gap: 8px;
+}
+
+
+.turma-frequencia-card {
+    min-width: 100px;
+
+    padding:
+        8px
+        10px;
+
+    border:
+        1px
+        solid
+        #e5e7eb;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+}
+
+
+.turma-frequencia-card > span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.turma-frequencia-card > div {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+.turma-frequencia-card strong {
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+.turma-frequencia-card small {
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.turma-frequencia-card.presenca {
+    border-color: #cfe8d7;
+
+    background: #f4fbf6;
+}
+
+
+.turma-frequencia-card.presenca strong,
+.turma-frequencia-card.presenca small {
+    color: #217a3c;
+}
+
+
+.turma-frequencia-card.falta {
+    border-color: #f1d0d0;
+
+    background: #fff7f7;
+}
+
+
+.turma-frequencia-card.falta strong,
+.turma-frequencia-card.falta small {
+    color: #b33a3a;
+}
+
+
 .turma-aluno-ver {
     min-width: 90px;
 
@@ -758,6 +877,7 @@
         48px
         minmax(0, 1fr)
         auto
+        auto
         auto;
 }
 
@@ -831,8 +951,21 @@
     }
 
 
+    .turma-aluno-item-gerenciavel > .badge {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+
+    .turma-aluno-frequencia {
+        grid-column: 2 / -1;
+        grid-row: 2;
+    }
+
+
     .matricula-acoes {
         grid-column: 2 / -1;
+        grid-row: 3;
 
         justify-content: flex-start;
     }
@@ -879,8 +1012,31 @@
     }
 
 
+    .turma-aluno-item-gerenciavel > .badge {
+        grid-column: 2;
+        grid-row: auto;
+
+        justify-self: start;
+    }
+
+
+    .turma-aluno-frequencia {
+        grid-column: 2;
+        grid-row: auto;
+
+        width: 100%;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
     .matricula-acoes {
         grid-column: 2;
+        grid-row: auto;
 
         flex-wrap: wrap;
     }

@@ -387,6 +387,22 @@ function TurmaDetalhes() {
     }
 
 
+    function formatarPercentual(
+        valor
+    ) {
+
+        return Number(
+            valor || 0
+        ).toLocaleString(
+            'pt-BR',
+            {
+                minimumFractionDigits: 1,
+                maximumFractionDigits: 1
+            }
+        ) + '%';
+    }
+
+
     function nomeDiaSemana(
         numero
     ) {
@@ -1625,6 +1641,14 @@ function TurmaDetalhes() {
                 </div>
 
 
+                <div
+                    className=
+                        "turma-frequencia-legenda"
+                >
+                    Frequência calculada somente com aulas encerradas. Faltas justificadas são contabilizadas como faltas.
+                </div>
+
+
                 {carregandoAlunos && (
 
                     <div
@@ -1820,6 +1844,69 @@ function TurmaDetalhes() {
 
                                                         )
                                                     }
+
+                                                </div>
+
+
+                                                <div
+                                                    className=
+                                                        "turma-aluno-frequencia"
+                                                >
+
+                                                    <div
+                                                        className=
+                                                            "turma-frequencia-card presenca"
+                                                    >
+                                                        <span>
+                                                            Presenças
+                                                        </span>
+
+                                                        <div>
+                                                            <strong>
+                                                                {
+                                                                    Number(
+                                                                        matricula.presencas || 0
+                                                                    )
+                                                                }
+                                                            </strong>
+
+                                                            <small>
+                                                                {
+                                                                    formatarPercentual(
+                                                                        matricula.percentual_presencas
+                                                                    )
+                                                                }
+                                                            </small>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div
+                                                        className=
+                                                            "turma-frequencia-card falta"
+                                                    >
+                                                        <span>
+                                                            Faltas
+                                                        </span>
+
+                                                        <div>
+                                                            <strong>
+                                                                {
+                                                                    Number(
+                                                                        matricula.faltas || 0
+                                                                    )
+                                                                }
+                                                            </strong>
+
+                                                            <small>
+                                                                {
+                                                                    formatarPercentual(
+                                                                        matricula.percentual_faltas
+                                                                    )
+                                                                }
+                                                            </small>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
 

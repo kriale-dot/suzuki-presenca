@@ -36,14 +36,78 @@ class TurmaAlunoRepository
                 ta.data_inicio,
                 ta.data_fim,
                 ta.ativo,
-                ta.criado_em
+                ta.criado_em,
+
+                COALESCE(
+                    SUM(
+                        CASE
+                            WHEN p.situacao = 'presente'
+                                THEN 1
+                            ELSE 0
+                        END
+                    ),
+                    0
+                ) AS presencas,
+
+                COALESCE(
+                    SUM(
+                        CASE
+                            WHEN p.situacao IN (
+                                'ausente',
+                                'justificada'
+                            )
+                                THEN 1
+                            ELSE 0
+                        END
+                    ),
+                    0
+                ) AS faltas,
+
+                COALESCE(
+                    SUM(
+                        CASE
+                            WHEN p.situacao = 'justificada'
+                                THEN 1
+                            ELSE 0
+                        END
+                    ),
+                    0
+                ) AS faltas_justificadas
 
             FROM turma_alunos ta
 
             INNER JOIN alunos a
                 ON a.id = ta.aluno_id
 
+            LEFT JOIN aulas au
+                ON au.turma_id = ta.turma_id
+               AND au.status = 'encerrada'
+               AND au.data_aula >= ta.data_inicio
+               AND (
+                    ta.data_fim IS NULL
+                    OR au.data_aula <= ta.data_fim
+               )
+
+            LEFT JOIN aula_alunos aa
+                ON aa.aula_id = au.id
+               AND aa.aluno_id = ta.aluno_id
+
+            LEFT JOIN presencas p
+                ON p.aula_aluno_id = aa.id
+
             WHERE ta.turma_id = :turma_id
+
+            GROUP BY
+                ta.id,
+                ta.turma_id,
+                ta.aluno_id,
+                a.nome,
+                a.data_nascimento,
+                a.foto_url,
+                ta.data_inicio,
+                ta.data_fim,
+                ta.ativo,
+                ta.criado_em
 
             ORDER BY
                 ta.ativo DESC,
@@ -57,7 +121,54 @@ class TurmaAlunoRepository
             'turma_id' => $turmaId
         ]);
 
-        return $stmt->fetchAll();
+        $matriculas = $stmt->fetchAll();
+
+        foreach ($matriculas as &$matricula) {
+
+            $presencas =
+                (int) ($matricula['presencas'] ?? 0);
+
+            $faltas =
+                (int) ($matricula['faltas'] ?? 0);
+
+            $faltasJustificadas =
+                (int) ($matricula['faltas_justificadas'] ?? 0);
+
+            $totalFrequencias =
+                $presencas + $faltas;
+
+            $matricula['presencas'] =
+                $presencas;
+
+            $matricula['faltas'] =
+                $faltas;
+
+            $matricula['faltas_justificadas'] =
+                $faltasJustificadas;
+
+            $matricula['total_frequencias'] =
+                $totalFrequencias;
+
+            $matricula['percentual_presencas'] =
+                $totalFrequencias > 0
+                    ? round(
+                        ($presencas / $totalFrequencias) * 100,
+                        1
+                    )
+                    : 0.0;
+
+            $matricula['percentual_faltas'] =
+                $totalFrequencias > 0
+                    ? round(
+                        ($faltas / $totalFrequencias) * 100,
+                        1
+                    )
+                    : 0.0;
+        }
+
+        unset($matricula);
+
+        return $matriculas;
     }
 
 
